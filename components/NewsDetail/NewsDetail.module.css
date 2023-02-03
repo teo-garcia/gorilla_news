@@ -1,0 +1,44 @@
+.wrapper {
+  padding: 64px 0;
+}
+
+.coverWrapper {
+  height: 300px;
+  position: relative;
+}
+
+.coverWrapper img {
+  object-fit: cover;
+}
+
+.title,
+.content {
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: var(--font-xl);
+  margin: 32px 0;
+}
+
+.content {
+  margin: 16px 0;
+  line-height: 1.8;
+}
+
+.likesDetail {
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.button {
+  border-radius: 4px;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.97);
+}

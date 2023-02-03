@@ -1,0 +1,12 @@
+.container {
+  gap: 16px 0;
+}
+
+.title {
+  font-size: var(--font-l);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
