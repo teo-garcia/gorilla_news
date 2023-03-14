@@ -1,0 +1,7 @@
+.footer {
+  height: 72px;
+}
+
+.text {
+  font-size: var(--font-s);
+}

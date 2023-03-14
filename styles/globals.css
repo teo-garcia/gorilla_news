@@ -1,0 +1,244 @@
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-regular);
+  font-size: var(--font-s);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: calc(100vh - 72px - 72px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+/* CSS Variables */
+:root {
+  --color-text: #212121;
+  --color-background: #fff;
+  --color-neutral: #90a4ae;
+  --color-primary: #7c4dff;
+  --color-secondary: #a0f;
+  --font-primary: "Ubuntu";
+  --font-secondary: "Ubuntu";
+  --font-regular: 400;
+  --font-bold: 700;
+  --font-xs: 1.6rem;
+  --font-s: 1.8rem;
+  --font-m: 2.4rem;
+  --font-l: 4rem;
+  --font-xl: 6rem;
+  --font-xxl: 8rem;
+}
+
+/* CSS Utilities  */
+.w-100vw {
+  width: 100vw;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.w-25pc {
+  width: 25%;
+}
+
+.w-50pc {
+  width: 50%;
+}
+
+.w-75pc {
+  width: 75%;
+}
+
+.w-100pc {
+  width: 100%;
+}
+
+.h-25pc {
+  height: 25%;
+}
+
+.h-50pc {
+  height: 50%;
+}
+
+.h-75pc {
+  height: 75%;
+}
+
+.h-100pc {
+  height: 100%;
+}
+
+.debug {
+  border: 2px solid red;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.ai-start {
+  align-items: start;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: end;
+}
+
+.jc-start {
+  justify-content: start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: end;
+}
+
+.wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-nowrap {
+  flex-wrap: wrap;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.bc-primary {
+  background-color: var(--color-primary);
+}
+
+.bc-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bc-background {
+  background-color: var(--color-background);
+}
+
+.bc-text {
+  background-color: var(--color-text);
+}
+
+.bc-neutral {
+  background-color: var(--color-neutral);
+}
+
+.c-primary {
+  color: var(--color-primary);
+}
+
+.c-secondary {
+  color: var(--color-secondary);
+}
+
+.c-background {
+  color: var(--color-background);
+}
+
+.c-text {
+  color: var(--color-text);
+}
+
+.c-neutral {
+  color: var(--color-neutral);
+}
+
+.fw-regular {
+  font-weight: var(--font-regular);
+}
+
+.fw-bold {
+  font-weight: var(--font-bold);
+}
