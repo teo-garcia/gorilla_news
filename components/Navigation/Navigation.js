@@ -5,6 +5,9 @@ import Link from "next/link";
 
 const Navigation = (props) => {
   const { title } = props;
+
+  if (!title) return null;
+
   return (
     <nav className={clsx(styles.nav, "bc-text w-100vw d-flex ai-center")}>
       <Link href="/" className={clsx(styles.link, "d-flex ai-center h-100pc")}>
@@ -17,4 +20,4 @@ const Navigation = (props) => {
   );
 };
 
-export default Navigation;
+export { Navigation };

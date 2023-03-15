@@ -3,6 +3,9 @@ import styles from "./Footer.module.css";
 
 const Footer = (props) => {
   const { description } = props;
+
+  if (!description) return null;
+
   return (
     <footer
       className={clsx(styles.footer, "bc-text d-flex ai-center jc-center")}
@@ -12,4 +15,4 @@ const Footer = (props) => {
   );
 };
 
-export default Footer;
+export { Footer };
