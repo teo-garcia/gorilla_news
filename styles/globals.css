@@ -14,15 +14,15 @@ html {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-primary);
   font-weight: var(--font-regular);
-  font-size: var(--font-s);
   background-color: var(--color-background);
   color: var(--color-text);
-  line-height: 1.5;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -46,12 +46,6 @@ svg {
   max-width: 100%;
 }
 
-main {
-  min-height: calc(100vh - 72px - 72px);
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 input,
 button,
 textarea,
@@ -65,21 +59,21 @@ button {
 
 /* CSS Variables */
 :root {
-  --color-text: #212121;
-  --color-background: #fff;
-  --color-neutral: #90a4ae;
-  --color-primary: #7c4dff;
-  --color-secondary: #a0f;
   --font-primary: "Ubuntu";
   --font-secondary: "Ubuntu";
   --font-regular: 400;
   --font-bold: 700;
-  --font-xs: 1.6rem;
-  --font-s: 1.8rem;
-  --font-m: 2.4rem;
-  --font-l: 4rem;
-  --font-xl: 6rem;
-  --font-xxl: 8rem;
+  --font-xs: 1.8rem;
+  --font-s: 2rem;
+  --font-m: 3rem;
+  --font-l: 8rem;
+  --font-xl: 10rem;
+  --font-xxl: 12rem;
+  --color-text: #333333;
+  --color-background: #f5f7fa;
+  --color-neutral: #09111d;
+  --color-primary: #4a90e2;
+  --color-secondary: #003057;
 }
 
 /* CSS Utilities  */
@@ -241,4 +235,29 @@ button {
 
 .fw-bold {
   font-weight: var(--font-bold);
+}
+
+main {
+  height: calc(100vh - 144px);
+  overflow-y: scroll;
+}
+
+.healthcheck h1 {
+  font-size: var(--font-xl);
+}
+
+.healthcheck p {
+  margin: 32px 0;
+  font-size: var(--font-l);
+  font-weight: var(--font-bold);
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }

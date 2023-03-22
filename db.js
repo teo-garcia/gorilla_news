@@ -3,14 +3,14 @@ const { faker } = require("@faker-js/faker");
 const getNews = (amount) =>
   Array(amount)
     .fill()
-    .map(() => ({
-      id: faker.datatype.number().toString(),
+    .map((_, index) => ({
+      id: (++index).toString(),
       title: faker.lorem.words(4),
-      description: faker.lorem.words(8),
+      description: faker.lorem.words(6),
       content: Array(3)
         .fill()
-        .map(() => faker.lorem.paragraphs(3)),
-      cover: faker.image.nature(1024, 300, true),
+        .map(() => faker.lorem.paragraphs(4)),
+      cover: "https://picsum.photos/2048/300",
       likes: 0,
     }));
 
@@ -27,7 +27,19 @@ const getGlobalConfig = () => ({
   },
 });
 
+const getHealthCheck = () => ({
+  website: {
+    status: 200,
+    message: "The website is operating normally.",
+  },
+  // website: {
+  //   status: 500,
+  //   message: "The website has issues.",
+  // },
+});
+
 module.exports = () => ({
   global: getGlobalConfig(),
-  news: getNews(18),
+  news: getNews(8),
+  healthcheck: getHealthCheck(),
 });

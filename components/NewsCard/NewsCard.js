@@ -5,10 +5,11 @@ import Link from "next/link";
 const NewsCard = (props) => {
   const { id, title, description } = props;
   return (
-    <li className={clsx(styles.card, "bc-text")}>
+    <li className={clsx(styles.card, "bc-secondary")}>
       <Link
-        href={`/${id}`}
+        href={`/news/${id}`}
         className={clsx(styles.link, "h-100pc d-flex fd-column jc-center")}
+        prefetch={false}
       >
         <h2 className={clsx(styles.title, "c-background")}>{title}</h2>
         <p className={clsx(styles.description, "c-background")}>

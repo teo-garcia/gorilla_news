@@ -1,9 +1,13 @@
 .card {
-  padding: 0 24px;
-  border-radius: 10px;
+  padding: 0 16px;
+  border-radius: 6px;
   width: 300px;
-  height: 180px;
+  height: 160px;
   list-style: none;
+  background-color: var(--color-secondary);
+  border-bottom: 6px solid var(--color-primary);
+  box-shadow: 2px 2px 8px -2px var(--color-neutral);
+  text-transform: capitalize;
 }
 
 .card:hover {
@@ -12,12 +16,12 @@
 
 .link {
   text-decoration: none;
-  gap: 16px 0;
+  gap: 8px 0;
 }
 
 .title {
   font-size: var(--font-s);
-  text-transform: capitalize;
+  line-height: 1.5;
 }
 
 .description {

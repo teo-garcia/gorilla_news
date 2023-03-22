@@ -2,11 +2,13 @@ import clsx from "clsx";
 import { NewsCard } from "../NewsCard/NewsCard";
 import styles from "./NewsGrid.module.css";
 
-const NewsGrid = (props) => {
+const NewsGrid = async (props) => {
   const { news, headline } = props;
   return (
-    <section className={clsx(styles.container, "d-flex fd-column jc-center")}>
-      <h1 className={clsx(styles.title, "c-text")}>{headline.title}</h1>
+    <section
+      className={clsx(styles.container, "d-flex fd-column jc-center ai-center")}
+    >
+      <h1 className={clsx(styles.title, "c-text w-100pc")}>{headline.title}</h1>
       <p className={styles.description}>{headline.description}</p>
       <ul className={clsx(styles.list, "d-flex wrap-wrap")}>
         {news.map((newItem) => (

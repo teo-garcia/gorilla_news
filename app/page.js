@@ -1,15 +1,16 @@
+import { NewsGrid } from "../components/NewsGrid/NewsGrid";
+import { getGlobalConfig, getNews } from "../utils/fakeAPI";
+
 const metadata = {
   title: "Gorilla News | Home",
 };
 
-const HomePage = () => {
-  return (
-    <>
-      <section className="h-100vh w-100vw d-flex jc-center ai-center">
-        <h1 className="c-text">Hi Band 👋 🦍</h1>
-      </section>
-    </>
-  );
+const HomePage = async () => {
+  const news = await getNews();
+  const globalConfig = await getGlobalConfig();
+  const { headline } = globalConfig;
+
+  return <NewsGrid headline={headline} news={news} />;
 };
 
 export { metadata };
